@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  num_acta: 1
+  dominio: MyString
+  fecha: 2021-02-22 11:42:40
+  tipo_vehiculo: MyString
+  pertenece_a: MyString
+  juzgado: MyString
+  articulo: MyString
+  autoridad: MyString
+
+two:
+  num_acta: 1
+  dominio: MyString
+  fecha: 2021-02-22 11:42:40
+  tipo_vehiculo: MyString
+  pertenece_a: MyString
+  juzgado: MyString
+  articulo: MyString
+  autoridad: MyString

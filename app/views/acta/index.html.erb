@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Acta</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Num acta</th>
+      <th>Dominio</th>
+      <th>Fecha</th>
+      <th>Tipo vehiculo</th>
+      <th>Pertenece a</th>
+      <th>Juzgado</th>
+      <th>Articulo</th>
+      <th>Autoridad</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @acta.each do |actum| %>
+      <tr>
+        <td><%= actum.num_acta %></td>
+        <td><%= actum.dominio %></td>
+        <td><%= actum.fecha %></td>
+        <td><%= actum.tipo_vehiculo %></td>
+        <td><%= actum.pertenece_a %></td>
+        <td><%= actum.juzgado %></td>
+        <td><%= actum.articulo %></td>
+        <td><%= actum.autoridad %></td>
+        <td><%= link_to 'Show', actum %></td>
+        <td><%= link_to 'Edit', edit_actum_path(actum) %></td>
+        <td><%= link_to 'Destroy', actum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Actum', new_actum_path %>

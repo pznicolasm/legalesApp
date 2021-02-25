@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Num acta:</strong>
+  <%= @actum.num_acta %>
+</p>
+
+<p>
+  <strong>Dominio:</strong>
+  <%= @actum.dominio %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @actum.fecha %>
+</p>
+
+<p>
+  <strong>Tipo vehiculo:</strong>
+  <%= @actum.tipo_vehiculo %>
+</p>
+
+<p>
+  <strong>Pertenece a:</strong>
+  <%= @actum.pertenece_a %>
+</p>
+
+<p>
+  <strong>Juzgado:</strong>
+  <%= @actum.juzgado %>
+</p>
+
+<p>
+  <strong>Articulo:</strong>
+  <%= @actum.articulo %>
+</p>
+
+<p>
+  <strong>Autoridad:</strong>
+  <%= @actum.autoridad %>
+</p>
+
+<%= link_to 'Edit', edit_actum_path(@actum) %> |
+<%= link_to 'Back', acta_path %>

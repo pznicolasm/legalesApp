@@ -1,0 +1,62 @@
+<%= form_with(model: actum) do |form| %>
+  <% if actum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(actum.errors.count, "error") %> prohibited this actum from being saved:</h2>
+
+      <ul>
+        <% actum.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.number_field :num_acta, class:"form-control", placeholder:"Numero de acta" %>
+  </div>
+<br/>
+  <div class="field">
+    <%= form.text_field :dominio, class:"form-control", placeholder:"Dominio" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Fecha %>
+    <%= form.datetime_select :fecha, class:"form-control", placeholder:"Fecha" %>
+  </div>
+
+  <div class="field">
+      <!-- <%= form.text_field :tipo_vehiculo, class:"form-control", placeholder:"Tipo de Vehiculo" %> -->
+    <select class="form-select" <%= form.text_field :tipo_vehiculo %>>
+      <option selected class="text-muted">Tipo de Vehiculo</option>
+      <option value="Moto">Moto</option>
+      <option value="Auto">Auto</option>
+      <option value="Camioneta">Camioneta</option>
+      <option value="T. Pasajeros">T. Pasajeros</option>
+      <option value="Camion">Camion</option>
+      <option value="Acoplado">Acoplado</option>
+      <option value="Trailer">Trailer</option>
+      <option value="Otro">Otro</option>    
+    </select>
+
+  </div>
+
+  <div class="field">
+    <%= form.text_field :pertenece_a, class:"form-control", placeholder:"Hecha por la base" %>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :juzgado, class:"form-control", placeholder:"Juzgado Perteneciente" %>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :articulo, class:"form-control", placeholder:"Articulo" %>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :autoridad, class:"form-control", placeholder:"Autoridad / Agente" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+ </div>
+<% end %>

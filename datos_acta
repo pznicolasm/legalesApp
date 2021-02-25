@@ -1,0 +1,52 @@
+NUM DE ACTA:
+	dominio:
+	dia:
+	mes:
+	ano:
+	hora:
+DATOS DEL VEHICULO -------------------------------------------------------------
+	tipo: (moto / auto / camioneta / t.pasajeros / camion / acoplado / trailer / otro
+	marca:
+	modelo:
+	color:
+	propietario:
+	dni/cuit:
+LUGAR --------------------------------------------------------------------------
+	calle/ruta/km:
+	sentido:
+	localidad:
+	partido:
+DATOS PRESUNTO INFRACTOR -------------------------------------------------------
+	tipo: (dni / pasaporte / otro)
+	num documento:
+	apell y nom:
+	sexo: (m / f)
+	titular: (si / no)
+	domicilio:
+	localidad:
+	partido:
+	provincia: 
+	pais:
+	lic num:
+	categoria:
+	expedida por:
+	vencimiento:
+DESCRIPCION DE LA INFRACCION ---------------------------------------------------
+	ley/ord:
+	articulo:
+	descripcion:
+OBSERVACIONES ------------------------------------------------------------------
+	c.a:
+ESPECIFICACIONES CINEMOMETRO/ALCOHOLIMETRO -------------------------------------
+	marca:
+	modelo:
+	n seria:
+	valor:
+BOLETA DE CITACION -------------------------------------------------------------
+	retuvo lic: (si / no)
+	retuvo veh: (si / no)
+AUTORIDAD DE CONSTATACION ------------------------------------------------------
+	legajo:
+	ape y nom:
+	cargo:
+

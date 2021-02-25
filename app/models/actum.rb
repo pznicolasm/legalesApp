@@ -1,0 +1,2 @@
+class Actum < ApplicationRecord
+end
