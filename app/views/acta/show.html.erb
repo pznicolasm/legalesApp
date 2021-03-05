@@ -41,4 +41,5 @@
 </p>
 
 <%= link_to 'Edit', edit_actum_path(@actum) %> |
-<%= link_to 'Back', acta_path %>
+<%= link_to 'Back', acta_path %> |
+<%= link_to 'Destroy', @actum, method: :delete, data: { confirm: 'Are you sure?' } %>
