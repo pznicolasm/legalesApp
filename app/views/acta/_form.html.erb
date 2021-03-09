@@ -27,8 +27,8 @@
 
   <div class="field">
       <!-- <%= form.text_field :tipo_vehiculo, class:"form-control", placeholder:"Tipo de Vehiculo" %> -->
-    <select class="form-select" <%= form.text_field :tipo_vehiculo %>>
-      <option selected class="text-muted">Tipo de Vehiculo</option>
+    <select class="form-select text-muted" <%= form.text_field :tipo_vehiculo %>>
+      <option selected>Tipo de Vehiculo</option>
       <option value="Moto">Moto</option>
       <option value="Auto">Auto</option>
       <option value="Camioneta">Camioneta</option>
@@ -51,66 +51,71 @@
 
   <div class="field">
     <!-- <%= form.text_field :articulo, class:"form-control", placeholder:"Articulo" %> -->
-    <select class="form-select" <%= form.text_field :articulo %>>
-      <option selected class="text-muted">Articulo</option>
-      <option vale="2">Articulo 2 - No posee la edad reglamentaria</option>
-      <option vale="12">Articulo 12 - </option>
-      <option vale="13">Articulo 13 - </option>
-      <option vale="14">Articulo 14 - Excede limites de contaminacion</option>
-      <option vale="16">Articulo 16 - No exhibir documentacion exigible</option>
-      <option vale="17">Articulo 17 - Los conductores que no circulen con cuidado y prevencion</option>
-      <option vale="18.a.1">Articulo 18.a.1 - Estando legalmente inhabilitado para circular</option>
-      <option vale="18.a.2">Articulo 18.a.2 - Sin haber sido habilitado para circular</option>
-      <option vale="18.a.3">Articulo 18.a.3 - Teniendo suspendida la habilitacion para circular</option>
-      <option vale="18.a.4">Articulo 18.a.4 - Sin estar habilitado para conducir ese vehiculo</option>
-      <option vale="18.a.5">Articulo 18.a.5 - Con habilitacion vencida</option>
-      <option vale="18.a.6">Articulo 18.a.6 - Sin portar su licencia habilitante</option>
-      <option vale="18.b">Articulo 18.b - Cedula de identificacion de vehiculo vencida</option>
-      <option vale="18.c.1">Articulo 18.c.1 - Sin portar el comprobante de seguro</option>
-      <option vale="18.c.2">Articulo 18.c.2 - Sin tener cobertura de seguro</option>
-      <option vale="18.d.1">Articulo 18.d.1 - Sin portar las placa de identificacion de dominio</option>
-      <option vale="18.d.2">Articulo 18.d.2 - Con placas de identificacion de dominio no correspondientes</option>
-      <option vale="18.d.3">Articulo 18.d.3 - Faltando la placa de identificacion de dominio delantera</option>
-      <option vale="18.d.4">Articulo 18.d.4 - Faltando la placa de identificacion de dominio trasera</option>
-      <option vale="18.f">Articulo 18.f - Sin portar matafuegos y balizas portatiles</option>
-      <option vale="18.g">Articulo 18.g - Sin que el num de acupantes guarde relacion con la capacidad del vehiculo</option>
-      <option vale="18.i">Articulo 18.i - Por no poseer los sistemas de seguridad originales en buen estado</option>
-      <option vale="18.j.1">Articulo 18.j.1 - En moto, circular sin casco</option>
-      <option vale="18.j.2">Articulo 18.j.2 - en moto, sin parabrisas el conductor que no use anteojos de seguridad</option>
-      <option vale="18.k">Articulo 18.k - Por no usar los correajes de seguridad</option>
-      <option vale="19">Articulo 19 - No ceder el paso / no respetar prioridades / no retroceder</option>
-      <option vale="20">Articulo 20 - Por adelantarse por la derecha</option>
-      <option vale="21">Articulo 21 - Por no respetar la senalizacion</option>
-      <option vale="22.a">Articulo 22.a - No respetar las luces de los semaforos / no detenerse en la lina marcada</option>
-      <option vale="22.e">Articulo 22.b - Por obstruir el transito de la via transversal</option>
-      <option vale="22.f">Articulo 22.f - Por girar a la izquierda en vias de doble mano</option>
-      <option vale="23">Articulo 23 - No ajustarse a las reglas de circulacion establecidas para las vias multicarriles</option>
-      <option vale="24">Articulo 24 - No ajustarse a las reglas de circulacion establecidas para las autopistas</option>
-      <option vale="25">Articulo 25 - Por no observas las lineas previstas para el uso de las luces</option>
-      <option vale="26">Articulo 26 - Por circular, detenerse en infraccion a las prohibiciones en la via publica</option>
-      <option vale="27">Articulo 27 - Por no obsevar las reglas de estacionamiento</option>
-      <option vale="28">Articulo 28 - No respetar los limites de velocidad</option>
-      <option vale="30">Articulo 30 - Por transportar escolares o menores (14) en infraccion a las normas</option>
-      <option vale="32">Articulo 32 - Por circular con vehiculo de emergencia en infraccion a las normas</option>
-      <option vale="33">Articulo 33 - Por circular con maquinaria especial en infraccion a las normas</option>
-      <option vale="34">Articulo 34 - Por utilizar franquicia de transito no reglamentaria</option>
-      <option vale="35">Articulo 35 - Por no cumplir con obligaciones legales para participes de un accidente</option>
-      <option vale="36">Articulo 36 - Por negarse a realizar la prueba de alcoholemia</option>
-      <option vale="38.c">Articulo 38.c - Las que afecten por contaminacion al medio ambiente</option>
-      <option vale="38.g">Articulo 38.g - Fugar o negarse a suministrar documentacion</option>
-      <option vale="38.m">Articulo 38.m - la conduccion en estado de intoxicacion alcoholica</option>
-      <option vale="38.o">Articulo 38.o - La conduccion a una distancia menor a la prudente al vehiculo que lo precede</option>
-      <option vale="38.r">Articulo 38.r - La conduccion de vehiculos utilizando auriculares/comunicacion manual/pantallas</option>
-      <option vale="38.s">Articulo 38.s - La conduccion de vehiculos propulsados por el conductor, traccion a sangre y maquinaria especial</option>
-      <option vale="38.x">Articulo 38.x - La conduccion de vehiculos a contramano</option>
-      <option vale="39">Articulo 39 - Por circular sin haber realizado RTO</option>
-      <option vale="39">Articulo 39 - Por circular sin la documentacion que acredite la RTO</option>
-      <option vale="40">Articulo 40 - Por circular sin casco los acompanantes de motos</option>
+    <select class="form-select text-muted" <%= form.text_field :articulo %>>
+      <option selected>Articulo</option>
+      <option value="2">Articulo 2 - No posee la edad reglamentaria</option>
+      <option value="12">Articulo 12 - </option>
+      <option value="13">Articulo 13 - </option>
+      <option value="14">Articulo 14 - Excede limites de contaminacion</option>
+      <option value="16">Articulo 16 - No exhibir documentacion exigible</option>
+      <option value="17">Articulo 17 - Los conductores que no circulen con cuidado y prevencion</option>
+      <option value="18.a.1">Articulo 18.a.1 - Estando legalmente inhabilitado para circular</option>
+      <option value="18.a.2">Articulo 18.a.2 - Sin haber sido habilitado para circular</option>
+      <option value="18.a.3">Articulo 18.a.3 - Teniendo suspendida la habilitacion para circular</option>
+      <option value="18.a.4">Articulo 18.a.4 - Sin estar habilitado para conducir ese vehiculo</option>
+      <option value="18.a.5">Articulo 18.a.5 - Con habilitacion vencida</option>
+      <option value="18.a.6">Ar   ticulo 18.a.6 - Sin portar su licencia habilitante</option>
+      <option value="18.b">Articulo 18.b - Cedula de identificacion de vehiculo vencida</option>
+      <option value="18.c.1">Articulo 18.c.1 - Sin portar el comprobante de seguro</option>
+      <option value="18.c.2">Articulo 18.c.2 - Sin tener cobertura de seguro</option>
+      <option value="18.d.1">Articulo 18.d.1 - Sin portar las placa de identificacion de dominio</option>
+      <option value="18.d.2">Articulo 18.d.2 - Con placas de identificacion de dominio no correspondientes</option>
+      <option value="18.d.3">Articulo 18.d.3 - Faltando la placa de identificacion de dominio delantera</option>
+      <option value="18.d.4">Articulo 18.d.4 - Faltando la placa de identificacion de dominio trasera</option>
+      <option value="18.f">Articulo 18.f - Sin portar matafuegos y balizas portatiles</option>
+      <option value="18.g">Articulo 18.g - Sin que el num de acupantes guarde relacion con la capacidad del vehiculo</option>
+      <option value="18.i">Articulo 18.i - Por no poseer los sistemas de seguridad originales en buen estado</option>
+      <option value="18.j.1">Articulo 18.j.1 - En moto, circular sin casco</option>
+      <option value="18.j.2">Articulo 18.j.2 - en moto, sin parabrisas el conductor que no use anteojos de seguridad</option>
+      <option value="18.k">Articulo 18.k - Por no usar los correajes de seguridad</option>
+      <option value="19">Articulo 19 - No ceder el paso / no respetar prioridades / no retroceder</option>
+      <option value="20">Articulo 20 - Por adelantarse por la derecha</option>
+      <option value="21">Articulo 21 - Por no respetar la senalizacion</option>
+      <option value="22.a">Articulo 22.a - No respetar las luces de los semaforos / no detenerse en la lina marcada</option>
+      <option value="22.e">Articulo 22.b - Por obstruir el transito de la via transversal</option>
+      <option value="22.f">Articulo 22.f - Por girar a la izquierda en vias de doble mano</option>
+      <option value="23">Articulo 23 - No ajustarse a las reglas de circulacion establecidas para las vias multicarriles</option>
+      <option value="24">Articulo 24 - No ajustarse a las reglas de circulacion establecidas para las autopistas</option>
+      <option value="25">Articulo 25 - Por no observas las lineas previstas para el uso de las luces</option>
+      <option value="26">Articulo 26 - Por circular, detenerse en infraccion a las prohibiciones en la via publica</option>
+      <option value="27">Articulo 27 - Por no obsevar las reglas de estacionamiento</option>
+      <option value="28">Articulo 28 - No respetar los limites de velocidad</option>
+      <option value="30">Articulo 30 - Por transportar escolares o menores (14) en infraccion a las normas</option>
+      <option value="32">Articulo 32 - Por circular con vehiculo de emergencia en infraccion a las normas</option>
+      <option value="33">Articulo 33 - Por circular con maquinaria especial en infraccion a las normas</option>
+      <option value="34">Articulo 34 - Por utilizar franquicia de transito no reglamentaria</option>
+      <option value="35">Articulo 35 - Por no cumplir con obligaciones legales para participes de un accidente</option>
+      <option value="36">Articulo 36 - Por negarse a realizar la prueba de alcoholemia</option>
+      <option value="38.c">Articulo 38.c - Las que afecten por contaminacion al medio ambiente</option>
+      <option value="38.g">Articulo 38.g - Fugar o negarse a suministrar documentacion</option>
+      <option value="38.m">Articulo 38.m - la conduccion en estado de intoxicacion alcoholica</option>
+      <option value="38.o">Articulo 38.o - La conduccion a una distancia menor a la prudente al vehiculo que lo precede</option>
+      <option value="38.r">Articulo 38.r - La conduccion de vehiculos utilizando auriculares/comunicacion manual/pantallas</option>
+      <option value="38.s">Articulo 38.s - La conduccion de vehiculos propulsados por el conductor, traccion a sangre y maquinaria especial</option>
+      <option value="38.x">Articulo 38.x - La conduccion de vehiculos a contramano</option>
+      <option value="39">Articulo 39 - Por circular sin haber realizado RTO</option>
+      <option value="39">Articulo 39 - Por circular sin la documentacion que acredite la RTO</option>
+      <option value="40">Articulo 40 - Por circular sin casco los acompanantes de motos</option>
     </select>
   </div>
 
   <div class="field">
     <%= form.text_field :autoridad, class:"form-control", placeholder:"Autoridad / Agente" %>
+  </div>
+
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+    <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
   </div>
 
   <div class="actions">

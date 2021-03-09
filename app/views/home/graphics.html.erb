@@ -1,0 +1,5 @@
+<h3 class=text-center> Por Articulo </h3>
+<%= pie_chart Actum.group(:articulo).count %>
+
+<h3 class=text-center> Por Base </h3>
+<%= column_chart Actum.group(:pertenece_a).count %>

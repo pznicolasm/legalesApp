@@ -7481,3 +7481,2358 @@ Processing by ActaController#new as HTML
 Completed 200 OK in 26ms (Views: 21.2ms | Allocations: 8121)
 
 
+Started GET "/" for 127.0.0.1 at 2021-03-08 09:16:52 -0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 359)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/nicolas/Escritorio/legalesApp/public/packs
+[Webpacker] Hash: 6569e8d5322d73dcb1c4
+Version: webpack 4.46.0
+Time: 8590ms
+Built at: 08/03/2021 09:17:03
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-e77ca03ecd3c3dc3263f.js   1.38 MiB  application  [emitted] [immutable]  application
+js/application-e77ca03ecd3c3dc3263f.js.map   1.51 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-e77ca03ecd3c3dc3263f.js js/application-e77ca03ecd3c3dc3263f.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 538 bytes {application} [built]
+[./node_modules/moment/locale sync recursive ^\.\/.*$] ./node_modules/moment/locale sync ^\.\/.*$ 3.21 KiB {application} [optional] [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 141 hidden modules
+
+  Rendered home/_header.html.erb (Duration: 1.0ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 10617.6ms | Allocations: 25948)
+Completed 200 OK in 10638ms (Views: 10621.6ms | ActiveRecord: 0.0ms | Allocations: 28490)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-08 09:17:07 -0300
+Processing by ActaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (1.0ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 24.7ms | Allocations: 6958)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 10170)
+Completed 200 OK in 35ms (Views: 29.7ms | ActiveRecord: 1.8ms | Allocations: 11373)
+
+
+Started GET "/acta/new" for 127.0.0.1 at 2021-03-08 09:17:16 -0300
+Processing by ActaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acta/new.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 13.9ms | Allocations: 4897)
+  Rendered acta/new.html.erb within layouts/application (Duration: 15.8ms | Allocations: 5241)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 8414)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms | Allocations: 8964)
+
+
+Started POST "/acta" for 127.0.0.1 at 2021-03-08 09:17:47 -0300
+Processing by ActaController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "actum"=>{"fecha(1i)"=>"2021", "fecha(2i)"=>"3", "fecha(3i)"=>"8", "fecha(4i)"=>"12", "fecha(5i)"=>"17", "num_acta"=>"123457", "dominio"=>"DRN548", "tipo_vehiculo"=>"Auto", "pertenece_a"=>"hudson", "juzgado"=>"la plata", "articulo"=>"Articulo 18.a.6 - Sin portar su licencia habilitante", "autoridad"=>"Nicolas perez"}, "commit"=>"Create Actum"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/acta_controller.rb:27:in `block in create'
+  [1m[36mActum Create (0.8ms)[0m  [1m[32mINSERT INTO "acta" ("num_acta", "dominio", "fecha", "tipo_vehiculo", "pertenece_a", "juzgado", "articulo", "autoridad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["num_acta", 123457], ["dominio", "DRN548"], ["fecha", "2021-03-08 12:17:00"], ["tipo_vehiculo", "Auto"], ["pertenece_a", "hudson"], ["juzgado", "la plata"], ["articulo", "Articulo 18.a.6 - Sin portar su licencia habilitante"], ["autoridad", "Nicolas perez"], ["created_at", "2021-03-08 12:17:47.139196"], ["updated_at", "2021-03-08 12:17:47.139196"]]
+  ↳ app/controllers/acta_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/acta_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/acta/6
+Completed 302 Found in 16ms (ActiveRecord: 5.0ms | Allocations: 5077)
+
+
+Started GET "/acta/6" for 127.0.0.1 at 2021-03-08 09:17:47 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mActum Load (0.3ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:62:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 490)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3607)
+Completed 200 OK in 18ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 8493)
+
+
+Started GET "/acta/6" for 127.0.0.1 at 2021-03-08 09:17:50 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:62:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 171)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3344)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 4295)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-08 09:17:53 -0300
+Processing by ActaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 858)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 4029)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 4424)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-08 09:26:33 -0300
+Processing by ActaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/acta/index.html.erb:20
+  [1m[36mActum Load (0.2ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/views/acta/index.html.erb:41
+  Rendered acta/index.html.erb within layouts/application (Duration: 15.9ms | Allocations: 7263)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 170)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 10884)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 1.0ms | Allocations: 12336)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-08 09:27:24 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.2ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 5288)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 8442)
+Completed 200 OK in 23ms (Views: 16.2ms | ActiveRecord: 1.3ms | Allocations: 11276)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-08 09:27:26 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 924)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 4095)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 0.4ms | Allocations: 5158)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-08 09:28:19 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 924)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4103)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.3ms | Allocations: 5183)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-08 09:28:30 -0300
+Processing by ActaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/acta/index.html.erb:20
+  [1m[36mActum Load (0.3ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/views/acta/index.html.erb:41
+  Rendered acta/index.html.erb within layouts/application (Duration: 17.9ms | Allocations: 7466)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 10626)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 2.2ms | Allocations: 11457)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-08 09:28:47 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT("acta"."articulo") FROM "acta"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.3ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 7395)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 7459)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.4ms | Allocations: 10168)
+
+
+  
+ActionView::Template::Error (undefined method `count' for 2:Integer):
+    38: 
+    39: <%= link_to 'New Actum', new_actum_path %>
+    40: 
+    41: <%= pie_chart @articulo.count %>
+  
+app/views/acta/index.html.erb:41
+Started GET "/acta" for 127.0.0.1 at 2021-03-08 09:29:14 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.2ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 5723)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.3ms | Allocations: 170)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 9468)
+Completed 200 OK in 27ms (Views: 20.6ms | ActiveRecord: 1.3ms | Allocations: 13171)
+
+
+Started GET "/acta/new" for 127.0.0.1 at 2021-03-08 09:29:34 -0300
+Processing by ActaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acta/new.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 3.6ms | Allocations: 3113)
+  Rendered acta/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 3456)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 6640)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 7180)
+
+
+Started POST "/acta" for 127.0.0.1 at 2021-03-08 09:30:10 -0300
+Processing by ActaController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "actum"=>{"fecha(1i)"=>"2021", "fecha(2i)"=>"3", "fecha(3i)"=>"8", "fecha(4i)"=>"12", "fecha(5i)"=>"29", "num_acta"=>"1234568", "dominio"=>"CRA444", "tipo_vehiculo"=>"Moto", "pertenece_a"=>"hudson", "juzgado"=>"la plata", "articulo"=>"Articulo 18.a.6 - Sin portar su licencia habilitante", "autoridad"=>"Nicolas perez"}, "commit"=>"Create Actum"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/acta_controller.rb:28:in `block in create'
+  [1m[36mActum Create (0.7ms)[0m  [1m[32mINSERT INTO "acta" ("num_acta", "dominio", "fecha", "tipo_vehiculo", "pertenece_a", "juzgado", "articulo", "autoridad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["num_acta", 1234568], ["dominio", "CRA444"], ["fecha", "2021-03-08 12:29:00"], ["tipo_vehiculo", "Moto"], ["pertenece_a", "hudson"], ["juzgado", "la plata"], ["articulo", "Articulo 18.a.6 - Sin portar su licencia habilitante"], ["autoridad", "Nicolas perez"], ["created_at", "2021-03-08 12:30:10.666181"], ["updated_at", "2021-03-08 12:30:10.666181"]]
+  ↳ app/controllers/acta_controller.rb:28:in `block in create'
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/acta_controller.rb:28:in `block in create'
+Redirected to http://localhost:3000/acta/7
+Completed 302 Found in 18ms (ActiveRecord: 4.8ms | Allocations: 4992)
+
+
+Started GET "/acta/7" for 127.0.0.1 at 2021-03-08 09:30:10 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mActum Load (0.2ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 477)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3652)
+Completed 200 OK in 11ms (Views: 7.1ms | ActiveRecord: 0.2ms | Allocations: 4861)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-08 09:30:13 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1020)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 4191)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.3ms | Allocations: 5259)
+
+
+Started GET "/acta/new" for 127.0.0.1 at 2021-03-08 10:45:28 -0300
+Processing by ActaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acta/new.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 4.4ms | Allocations: 2512)
+  Rendered acta/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2618)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 5790)
+Completed 200 OK in 16ms (Views: 15.0ms | Allocations: 6192)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-08 10:45:37 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 221)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3371)
+Completed 200 OK in 8ms (Views: 6.8ms | Allocations: 4246)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-08 10:45:39 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.5ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1055)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 4243)
+Completed 200 OK in 29ms (Views: 19.8ms | ActiveRecord: 1.9ms | Allocations: 5947)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-08 10:46:33 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1314)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 170)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 4940)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.3ms | Allocations: 6720)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-08 10:47:14 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.2ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1325)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 170)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 4950)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.4ms | Allocations: 6726)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 09:47:54 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 453)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.1ms | Allocations: 176)
+  Rendered layout layouts/application.html.erb (Duration: 38.6ms | Allocations: 6610)
+Completed 200 OK in 55ms (Views: 42.1ms | ActiveRecord: 0.0ms | Allocations: 9152)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 09:48:23 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mActum Load (0.2ms)[0m  [1m[34mSELECT "acta".* FROM "acta" GROUP BY "acta"."articulo" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered home/index.html.erb within layouts/application (Duration: 30.9ms | Allocations: 14892)
+  Rendered layout layouts/application.html.erb (Duration: 31.2ms | Allocations: 14956)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.7ms | Allocations: 16019)
+
+
+  
+ActionView::Template::Error (undefined method `countarticulo' for #<Actum::ActiveRecord_Relation:0x00007fcf790cd4d8>):
+    14: 	</div>
+    15: </div>
+    16: 
+    17: <%= column_chart Actum.group(:articulo).countarticulo %>
+  
+app/views/home/index.html.erb:17
+Started GET "/" for 127.0.0.1 at 2021-03-09 09:48:38 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/views/home/index.html.erb:17
+  Rendered home/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1227)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 178)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 5016)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.4ms | Allocations: 6210)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 09:48:53 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/views/home/index.html.erb:17
+  Rendered home/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 957)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4143)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.2ms | Allocations: 4522)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 09:52:22 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 4283)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 4347)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 5414)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `graphics_path' for #<ActionView::Base:0x000000000097b8>):
+    12: 			<%= link_to 'Lista', acta_path, class:'btn btn-primary text-white' %>
+    13: 		</div>
+    14: 		<div class="col-4">
+    15: 			<%= link_to 'Estadisticas', graphics_path ,class:'btn btn-primary text-white' %>
+    16: 		</div>
+    17: 
+    18: 	</div>
+  
+app/views/home/index.html.erb:15
+Started GET "/" for 127.0.0.1 at 2021-03-09 09:54:39 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 4116)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 4181)
+Completed 500 Internal Server Error in 12ms (Allocations: 4651)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `graphics_path' for #<ActionView::Base:0x0000000000ac08>):
+    12: 			<%= link_to 'Lista', acta_path, class:'btn btn-primary text-white' %>
+    13: 		</div>
+    14: 		<div class="col-4">
+    15: 			<%= link_to 'Estadisticas', graphics_path ,class:'btn btn-primary text-white' %>
+    16: 		</div>
+    17: 
+    18: 	</div>
+  
+app/views/home/index.html.erb:15
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:01:56 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 21.6ms | Allocations: 4278)
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | Allocations: 4342)
+Completed 500 Internal Server Error in 31ms (Allocations: 5402)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `graphics_home_path' for #<ActionView::Base:0x0000000000af50>):
+    12: 			<%= link_to 'Lista', acta_path, class:'btn btn-primary text-white' %>
+    13: 		</div>
+    14: 		<div class="col-4">
+    15: 			<%= link_to 'Estadisticas', graphics_home_path ,class:'btn btn-primary text-white' %>
+    16: 		</div>
+    17: 
+    18: 	</div>
+  
+app/views/home/index.html.erb:15
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:01:57 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 4123)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 4187)
+Completed 500 Internal Server Error in 17ms (Allocations: 4534)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `graphics_home_path' for #<ActionView::Base:0x0000000000b360>):
+    12: 			<%= link_to 'Lista', acta_path, class:'btn btn-primary text-white' %>
+    13: 		</div>
+    14: 		<div class="col-4">
+    15: 			<%= link_to 'Estadisticas', graphics_home_path ,class:'btn btn-primary text-white' %>
+    16: 		</div>
+    17: 
+    18: 	</div>
+  
+app/views/home/index.html.erb:15
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:03:46 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 15.2ms | Allocations: 4312)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 4377)
+Completed 500 Internal Server Error in 18ms (Allocations: 5444)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `about_home_path' for #<ActionView::Base:0x0000000000b6d0>
+Did you mean?  home_about_path):
+    12: 			<%= link_to 'Lista', acta_path, class:'btn btn-primary text-white' %>
+    13: 		</div>
+    14: 		<div class="col-4">
+    15: 			<%= link_to 'Estadisticas', about_home_path ,class:'btn btn-primary text-white' %>
+    16: 		</div>
+    17: 
+    18: 	</div>
+  
+app/views/home/index.html.erb:15
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:03:47 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 15.8ms | Allocations: 4156)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 4220)
+Completed 500 Internal Server Error in 17ms (Allocations: 4567)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `about_home_path' for #<ActionView::Base:0x0000000000bae0>
+Did you mean?  home_about_path):
+    12: 			<%= link_to 'Lista', acta_path, class:'btn btn-primary text-white' %>
+    13: 		</div>
+    14: 		<div class="col-4">
+    15: 			<%= link_to 'Estadisticas', about_home_path ,class:'btn btn-primary text-white' %>
+    16: 		</div>
+    17: 
+    18: 	</div>
+  
+app/views/home/index.html.erb:15
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:04:08 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 266)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 173)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 3911)
+Completed 200 OK in 16ms (Views: 15.1ms | Allocations: 5000)
+
+
+Started GET "/home/graphics" for 127.0.0.1 at 2021-03-09 11:04:11 -0300
+Processing by HomeController#graphics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/graphics.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/home/graphics.html.erb:1
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/views/home/graphics.html.erb:1
+  Rendered home/graphics.html.erb within layouts/application (Duration: 17.9ms | Allocations: 6492)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.8ms | Allocations: 72)
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 9577)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.7ms | Allocations: 10056)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:06:19 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 265)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 170)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3891)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 4979)
+
+
+Started GET "/home/graphics" for 127.0.0.1 at 2021-03-09 11:06:20 -0300
+Processing by HomeController#graphics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/graphics.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/views/home/graphics.html.erb:1
+  Rendered home/graphics.html.erb within layouts/application (Duration: 2.2ms | Allocations: 953)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 72)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 4134)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.2ms | Allocations: 4612)
+
+
+Started GET "/home/graphics" for 127.0.0.1 at 2021-03-09 11:06:52 -0300
+Processing by HomeController#graphics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/graphics.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/views/home/graphics.html.erb:1
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "base" AS base FROM "acta" GROUP BY "base"[0m
+  ↳ app/views/home/graphics.html.erb:3
+  Rendered home/graphics.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1785)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 180)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 5413)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.7ms | Allocations: 6412)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActum Load (0.2ms)[0m  [1m[34mSELECT "acta".* FROM "acta" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mActum Load (0.4ms)[0m  [1m[34mSELECT "acta".* FROM "acta" ORDER BY "acta"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mActum Load (0.3ms)[0m  [1m[34mSELECT "acta".* FROM "acta" ORDER BY "acta"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" ORDER BY "acta"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/home/graphics" for 127.0.0.1 at 2021-03-09 11:18:19 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#graphics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/graphics.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/views/home/graphics.html.erb:1
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."pertenece_a" AS acta_pertenece_a FROM "acta" GROUP BY "acta"."pertenece_a"[0m
+  ↳ app/views/home/graphics.html.erb:3
+  Rendered home/graphics.html.erb within layouts/application (Duration: 9.2ms | Allocations: 2848)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 201)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 9012)
+Completed 200 OK in 28ms (Views: 20.7ms | ActiveRecord: 0.8ms | Allocations: 11332)
+
+
+Started GET "/home/graphics" for 127.0.0.1 at 2021-03-09 11:18:20 -0300
+Processing by HomeController#graphics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/graphics.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/views/home/graphics.html.erb:1
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."pertenece_a" AS acta_pertenece_a FROM "acta" GROUP BY "acta"."pertenece_a"[0m
+  ↳ app/views/home/graphics.html.erb:3
+  Rendered home/graphics.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1710)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 4888)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.4ms | Allocations: 5266)
+
+
+Started GET "/home/graphics" for 127.0.0.1 at 2021-03-09 11:19:20 -0300
+Processing by HomeController#graphics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/graphics.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/views/home/graphics.html.erb:2
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."pertenece_a" AS acta_pertenece_a FROM "acta" GROUP BY "acta"."pertenece_a"[0m
+  ↳ app/views/home/graphics.html.erb:6
+  Rendered home/graphics.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1816)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 5460)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.5ms | Allocations: 6471)
+
+
+Started GET "/home/graphics" for 127.0.0.1 at 2021-03-09 11:19:26 -0300
+Processing by HomeController#graphics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/graphics.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/views/home/graphics.html.erb:2
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."pertenece_a" AS acta_pertenece_a FROM "acta" GROUP BY "acta"."pertenece_a"[0m
+  ↳ app/views/home/graphics.html.erb:6
+  Rendered home/graphics.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1813)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 5455)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.3ms | Allocations: 6463)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:20:02 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 275)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 170)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3900)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 4988)
+
+
+Started GET "/acta/new" for 127.0.0.1 at 2021-03-09 11:20:11 -0300
+Processing by ActaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acta/new.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 14.9ms | Allocations: 4971)
+  Rendered acta/new.html.erb within layouts/application (Duration: 16.5ms | Allocations: 5314)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 8447)
+Completed 200 OK in 33ms (Views: 21.7ms | ActiveRecord: 0.9ms | Allocations: 14546)
+
+
+Started GET "/acta/new" for 127.0.0.1 at 2021-03-09 11:20:16 -0300
+Processing by ActaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acta/new.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 6.4ms | Allocations: 2510)
+  Rendered acta/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2616)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 5808)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 6210)
+
+
+Started POST "/acta" for 127.0.0.1 at 2021-03-09 11:22:33 -0300
+Processing by ActaController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "actum"=>{"fecha(1i)"=>"2020", "fecha(2i)"=>"3", "fecha(3i)"=>"2", "fecha(4i)"=>"14", "fecha(5i)"=>"20", "num_acta"=>"456789", "dominio"=>"OQF008", "tipo_vehiculo"=>"Auto", "pertenece_a"=>"Hudson", "juzgado"=>"La plata", "articulo"=>"Articulo 18.a.3 - Teniendo suspendida la habilitacion para circular", "autoridad"=>"Mauro Anagrafe"}, "commit"=>"Create Actum"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/acta_controller.rb:28:in `block in create'
+  [1m[36mActum Create (0.5ms)[0m  [1m[32mINSERT INTO "acta" ("num_acta", "dominio", "fecha", "tipo_vehiculo", "pertenece_a", "juzgado", "articulo", "autoridad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["num_acta", 456789], ["dominio", "OQF008"], ["fecha", "2020-03-02 14:20:00"], ["tipo_vehiculo", "Auto"], ["pertenece_a", "Hudson"], ["juzgado", "La plata"], ["articulo", "Articulo 18.a.3 - Teniendo suspendida la habilitacion para circular"], ["autoridad", "Mauro Anagrafe"], ["created_at", "2021-03-09 14:22:33.784106"], ["updated_at", "2021-03-09 14:22:33.784106"]]
+  ↳ app/controllers/acta_controller.rb:28:in `block in create'
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/acta_controller.rb:28:in `block in create'
+Redirected to http://localhost:3000/acta/8
+Completed 302 Found in 18ms (ActiveRecord: 7.0ms | Allocations: 5080)
+
+
+Started GET "/acta/8" for 127.0.0.1 at 2021-03-09 11:22:33 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mActum Load (0.2ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 496)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3627)
+Completed 200 OK in 28ms (Views: 7.4ms | ActiveRecord: 0.2ms | Allocations: 8529)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-09 11:22:37 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.2ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1451)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 4642)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.5ms | Allocations: 5870)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:23:19 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 266)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 170)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3905)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 4996)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-09 11:23:21 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1408)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 4583)
+Completed 200 OK in 20ms (Views: 15.6ms | ActiveRecord: 0.4ms | Allocations: 6181)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:23:31 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 119)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3294)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 3672)
+
+
+Started GET "/home/graphics" for 127.0.0.1 at 2021-03-09 11:23:32 -0300
+Processing by HomeController#graphics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/graphics.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/views/home/graphics.html.erb:2
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."pertenece_a" AS acta_pertenece_a FROM "acta" GROUP BY "acta"."pertenece_a"[0m
+  ↳ app/views/home/graphics.html.erb:6
+  Rendered home/graphics.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1846)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 72)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 5027)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.4ms | Allocations: 5505)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:24:05 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 115)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 3309)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 3687)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-09 11:24:07 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1112)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 4287)
+Completed 200 OK in 18ms (Views: 13.7ms | ActiveRecord: 0.4ms | Allocations: 5367)
+
+
+Started GET "/acta/8" for 127.0.0.1 at 2021-03-09 11:24:16 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 13.8ms | Allocations: 471)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 3660)
+Completed 200 OK in 28ms (Views: 23.7ms | ActiveRecord: 0.1ms | Allocations: 4722)
+
+
+Started GET "/acta/8/edit" for 127.0.0.1 at 2021-03-09 11:24:18 -0300
+Processing by ActaController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/edit.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 8.1ms | Allocations: 3099)
+  Rendered acta/edit.html.erb within layouts/application (Duration: 9.8ms | Allocations: 3490)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 6675)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.1ms | Allocations: 7736)
+
+
+Started PATCH "/acta/8" for 127.0.0.1 at 2021-03-09 11:24:23 -0300
+Processing by ActaController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "actum"=>{"fecha(1i)"=>"2020", "fecha(2i)"=>"3", "fecha(3i)"=>"2", "fecha(4i)"=>"14", "fecha(5i)"=>"20", "num_acta"=>"456789", "dominio"=>"OQF008", "tipo_vehiculo"=>"Tipo de Vehiculo", "pertenece_a"=>"hudson", "juzgado"=>"La plata", "articulo"=>"Articulo", "autoridad"=>"Mauro Anagrafe"}, "commit"=>"Update Actum", "id"=>"8"}
+  [1m[36mActum Load (0.3ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+  [1m[36mActum Update (0.3ms)[0m  [1m[33mUPDATE "acta" SET "tipo_vehiculo" = ?, "pertenece_a" = ?, "articulo" = ?, "updated_at" = ? WHERE "acta"."id" = ?[0m  [["tipo_vehiculo", "Tipo de Vehiculo"], ["pertenece_a", "hudson"], ["articulo", "Articulo"], ["updated_at", "2021-03-09 14:24:23.841561"], ["id", 8]]
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+Redirected to http://localhost:3000/acta/8
+Completed 302 Found in 17ms (ActiveRecord: 5.7ms | Allocations: 5449)
+
+
+Started GET "/acta/8" for 127.0.0.1 at 2021-03-09 11:24:23 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 174)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3359)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 4298)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-09 11:24:25 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1104)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 4278)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.3ms | Allocations: 5358)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:24:27 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 119)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3294)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 3672)
+
+
+Started GET "/home/graphics" for 127.0.0.1 at 2021-03-09 11:24:29 -0300
+Processing by HomeController#graphics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/graphics.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/views/home/graphics.html.erb:2
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."pertenece_a" AS acta_pertenece_a FROM "acta" GROUP BY "acta"."pertenece_a"[0m
+  ↳ app/views/home/graphics.html.erb:6
+  Rendered home/graphics.html.erb within layouts/application (Duration: 9.7ms | Allocations: 1721)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 4894)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.6ms | Allocations: 5272)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:24:43 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 112)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3283)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 3660)
+
+
+Started GET "/acta/new" for 127.0.0.1 at 2021-03-09 11:24:44 -0300
+Processing by ActaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acta/new.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 3.6ms | Allocations: 2518)
+  Rendered acta/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2731)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 5902)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 6429)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:27:01 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 119)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 3331)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 3711)
+
+
+Started GET "/home/graphics" for 127.0.0.1 at 2021-03-09 11:27:05 -0300
+Processing by HomeController#graphics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/graphics.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/views/home/graphics.html.erb:2
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."pertenece_a" AS acta_pertenece_a FROM "acta" GROUP BY "acta"."pertenece_a"[0m
+  ↳ app/views/home/graphics.html.erb:6
+  Rendered home/graphics.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1723)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 4910)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.6ms | Allocations: 5290)
+
+
+Started GET "/home/graphics" for 127.0.0.1 at 2021-03-09 11:27:34 -0300
+Processing by HomeController#graphics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/graphics.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/views/home/graphics.html.erb:2
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."pertenece_a" AS acta_pertenece_a FROM "acta" GROUP BY "acta"."pertenece_a"[0m
+  ↳ app/views/home/graphics.html.erb:6
+  Rendered home/graphics.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1823)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.0ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 5451)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.3ms | Allocations: 6456)
+
+
+Started GET "/home/graphics" for 127.0.0.1 at 2021-03-09 11:28:00 -0300
+Processing by HomeController#graphics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/graphics.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/views/home/graphics.html.erb:2
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."pertenece_a" AS acta_pertenece_a FROM "acta" GROUP BY "acta"."pertenece_a"[0m
+  ↳ app/views/home/graphics.html.erb:6
+  Rendered home/graphics.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1818)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 5459)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.3ms | Allocations: 6459)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:29:20 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 265)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3440)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 3946)
+
+
+Started GET "/acta/new" for 127.0.0.1 at 2021-03-09 11:29:35 -0300
+Processing by ActaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acta/new.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 7.9ms | Allocations: 3032)
+  Rendered acta/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 3372)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 6543)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 7441)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:30:00 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 119)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3294)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 3672)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-09 11:30:01 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1408)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 4587)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.3ms | Allocations: 5790)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:30:10 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 119)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 3308)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 3688)
+
+
+Started GET "/home/graphics" for 127.0.0.1 at 2021-03-09 11:30:12 -0300
+Processing by HomeController#graphics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/graphics.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/views/home/graphics.html.erb:2
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."pertenece_a" AS acta_pertenece_a FROM "acta" GROUP BY "acta"."pertenece_a"[0m
+  ↳ app/views/home/graphics.html.erb:6
+  Rendered home/graphics.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1723)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 4910)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.4ms | Allocations: 5290)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:30:25 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 112)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3283)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 3660)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-09 11:30:26 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 4274)
+Completed 200 OK in 16ms (Views: 12.2ms | ActiveRecord: 0.3ms | Allocations: 5354)
+
+
+Started GET "/acta/5" for 127.0.0.1 at 2021-03-09 11:30:28 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 476)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3655)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.1ms | Allocations: 4717)
+
+
+Started GET "/acta/5/edit" for 127.0.0.1 at 2021-03-09 11:30:30 -0300
+Processing by ActaController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/edit.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 4.9ms | Allocations: 2563)
+  Rendered acta/edit.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2818)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 5989)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.1ms | Allocations: 7048)
+
+
+Started PATCH "/acta/5" for 127.0.0.1 at 2021-03-09 11:30:36 -0300
+Processing by ActaController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "actum"=>{"fecha(1i)"=>"2021", "fecha(2i)"=>"3", "fecha(3i)"=>"5", "fecha(4i)"=>"15", "fecha(5i)"=>"07", "num_acta"=>"123456", "dominio"=>"aa908xo", "tipo_vehiculo"=>"Tipo de Vehiculo", "pertenece_a"=>"Las flores", "juzgado"=>"la plata", "articulo"=>"Articulo", "autoridad"=>"Nicolas perez"}, "commit"=>"Update Actum", "id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+  [1m[36mActum Update (0.4ms)[0m  [1m[33mUPDATE "acta" SET "tipo_vehiculo" = ?, "pertenece_a" = ?, "articulo" = ?, "updated_at" = ? WHERE "acta"."id" = ?[0m  [["tipo_vehiculo", "Tipo de Vehiculo"], ["pertenece_a", "Las flores"], ["articulo", "Articulo"], ["updated_at", "2021-03-09 14:30:36.146496"], ["id", 5]]
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+Redirected to http://localhost:3000/acta/5
+Completed 302 Found in 17ms (ActiveRecord: 5.3ms | Allocations: 5423)
+
+
+Started GET "/acta/5" for 127.0.0.1 at 2021-03-09 11:30:36 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 174)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 3345)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.1ms | Allocations: 4283)
+
+
+Started GET "/acta/5" for 127.0.0.1 at 2021-03-09 11:30:37 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 170)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3355)
+Completed 200 OK in 12ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 4289)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:30:37 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 119)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3308)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 3688)
+
+
+Started GET "/home/graphics" for 127.0.0.1 at 2021-03-09 11:30:38 -0300
+Processing by HomeController#graphics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/graphics.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/views/home/graphics.html.erb:2
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."pertenece_a" AS acta_pertenece_a FROM "acta" GROUP BY "acta"."pertenece_a"[0m
+  ↳ app/views/home/graphics.html.erb:6
+  Rendered home/graphics.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1724)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 4911)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.4ms | Allocations: 5291)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:30:51 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 112)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 3283)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 3660)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-09 11:30:52 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 4264)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.3ms | Allocations: 5329)
+
+
+Started GET "/acta/8" for 127.0.0.1 at 2021-03-09 11:31:13 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 170)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3355)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 4288)
+
+
+Started GET "/acta/8/edit" for 127.0.0.1 at 2021-03-09 11:31:15 -0300
+Processing by ActaController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/edit.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 2.9ms | Allocations: 2554)
+  Rendered acta/edit.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2686)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 5855)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.1ms | Allocations: 6787)
+
+
+Started PATCH "/acta/8" for 127.0.0.1 at 2021-03-09 11:31:20 -0300
+Processing by ActaController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "actum"=>{"fecha(1i)"=>"2020", "fecha(2i)"=>"3", "fecha(3i)"=>"2", "fecha(4i)"=>"14", "fecha(5i)"=>"20", "num_acta"=>"456789", "dominio"=>"OQF008", "tipo_vehiculo"=>"Auto", "pertenece_a"=>"hudson", "juzgado"=>"La plata", "articulo"=>"Articulo 18.b - Cedula de identificacion de vehiculo vencida", "autoridad"=>"Mauro Anagrafe"}, "commit"=>"Update Actum", "id"=>"8"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+  [1m[36mActum Update (0.4ms)[0m  [1m[33mUPDATE "acta" SET "tipo_vehiculo" = ?, "articulo" = ?, "updated_at" = ? WHERE "acta"."id" = ?[0m  [["tipo_vehiculo", "Auto"], ["articulo", "Articulo 18.b - Cedula de identificacion de vehiculo vencida"], ["updated_at", "2021-03-09 14:31:20.916013"], ["id", 8]]
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+Redirected to http://localhost:3000/acta/8
+Completed 302 Found in 19ms (ActiveRecord: 7.9ms | Allocations: 5413)
+
+
+Started GET "/acta/8" for 127.0.0.1 at 2021-03-09 11:31:20 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 173)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3344)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.1ms | Allocations: 4281)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:31:22 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 112)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3297)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 3676)
+
+
+Started GET "/home/graphics" for 127.0.0.1 at 2021-03-09 11:31:22 -0300
+Processing by HomeController#graphics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/graphics.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/views/home/graphics.html.erb:2
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."pertenece_a" AS acta_pertenece_a FROM "acta" GROUP BY "acta"."pertenece_a"[0m
+  ↳ app/views/home/graphics.html.erb:6
+  Rendered home/graphics.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1748)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 4935)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.4ms | Allocations: 5315)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:31:46 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 112)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3309)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 3699)
+
+
+Started GET "/acta/new" for 127.0.0.1 at 2021-03-09 11:31:56 -0300
+Processing by ActaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acta/new.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 6.1ms | Allocations: 2510)
+  Rendered acta/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 2616)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 5785)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 6186)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:32:27 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 112)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3283)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 3661)
+
+
+Started GET "/home/graphics" for 127.0.0.1 at 2021-03-09 11:32:28 -0300
+Processing by HomeController#graphics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/graphics.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/views/home/graphics.html.erb:2
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."pertenece_a" AS acta_pertenece_a FROM "acta" GROUP BY "acta"."pertenece_a"[0m
+  ↳ app/views/home/graphics.html.erb:6
+  Rendered home/graphics.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1748)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 4935)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.9ms | Allocations: 5314)
+
+
+Started GET "/home/graphics" for 127.0.0.1 at 2021-03-09 11:33:23 -0300
+Processing by HomeController#graphics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/graphics.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/views/home/graphics.html.erb:2
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."pertenece_a" AS acta_pertenece_a FROM "acta" GROUP BY "acta"."pertenece_a"[0m
+  ↳ app/views/home/graphics.html.erb:6
+  Rendered home/graphics.html.erb within layouts/application (Duration: 24.5ms | Allocations: 9798)
+  Rendered layout layouts/application.html.erb (Duration: 24.9ms | Allocations: 9862)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.6ms | Allocations: 10842)
+
+
+  
+ActionView::Template::Error (undefined method `colum_chart' for #<ActionView::Base:0x0000000000aa28>
+Did you mean?  column_chart):
+    3: 
+    4: <h3 class=text-center> Por Base </h3>
+    5: 
+    6: <%= colum_chart Actum.group(:pertenece_a).count %>
+  
+app/views/home/graphics.html.erb:6
+Started GET "/home/graphics" for 127.0.0.1 at 2021-03-09 11:33:37 -0300
+Processing by HomeController#graphics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/graphics.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/views/home/graphics.html.erb:2
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."pertenece_a" AS acta_pertenece_a FROM "acta" GROUP BY "acta"."pertenece_a"[0m
+  ↳ app/views/home/graphics.html.erb:6
+  Rendered home/graphics.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1954)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 5748)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.3ms | Allocations: 6849)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:34:33 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 265)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3440)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 3944)
+
+
+Started GET "/home/about?lang=es" for 127.0.0.1 at 2021-03-09 11:34:44 -0300
+Processing by HomeController#about as HTML
+  Parameters: {"lang"=>"es"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.3ms | Allocations: 96)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 72)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3299)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 3748)
+
+
+Started GET "/acta/new" for 127.0.0.1 at 2021-03-09 11:34:50 -0300
+Processing by ActaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acta/new.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 3.6ms | Allocations: 3132)
+  Rendered acta/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 3472)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 6643)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 7559)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:39:28 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 119)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3294)
+Completed 200 OK in 10ms (Views: 8.8ms | Allocations: 3672)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-09 11:42:46 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.3ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1456)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 4631)
+Completed 200 OK in 16ms (Views: 11.8ms | ActiveRecord: 0.8ms | Allocations: 6455)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-09 11:43:29 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.2ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1282)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 170)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 4922)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.4ms | Allocations: 6718)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-09 11:43:47 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1279)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 170)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 4919)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.4ms | Allocations: 6711)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-09 11:44:05 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1279)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 170)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 4904)
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 0.4ms | Allocations: 6691)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-09 11:44:15 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.2ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1279)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 170)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 4904)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 0.4ms | Allocations: 6694)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActum Load (0.2ms)[0m  [1m[34mSELECT "acta".* FROM "acta" ORDER BY "acta"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mActum Load (0.3ms)[0m  [1m[34mSELECT "acta".* FROM "acta" ORDER BY "acta"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/acta" for 127.0.0.1 at 2021-03-09 11:46:06 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ActaController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.3ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 6684)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 175)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 12826)
+Completed 200 OK in 39ms (Views: 25.2ms | ActiveRecord: 1.3ms | Allocations: 17060)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 11:46:06 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 274)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3451)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 4370)
+
+
+Started GET "/acta/new" for 127.0.0.1 at 2021-03-09 11:46:08 -0300
+Processing by ActaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acta/new.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 8.3ms | Allocations: 4905)
+  Rendered acta/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 5248)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 8421)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.0ms | Allocations: 8972)
+
+
+Started GET "/acta/new" for 127.0.0.1 at 2021-03-09 11:46:18 -0300
+Processing by ActaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acta/new.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 3.6ms | Allocations: 3040)
+  Rendered acta/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 3383)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 169)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 7019)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 8143)
+
+
+Started GET "/acta/new" for 127.0.0.1 at 2021-03-09 11:46:38 -0300
+Processing by ActaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acta/new.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 4.7ms | Allocations: 3026)
+  Rendered acta/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 3365)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 169)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 6996)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 8114)
+
+
+Started GET "/acta/new" for 127.0.0.1 at 2021-03-09 11:46:55 -0300
+Processing by ActaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acta/new.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 4.4ms | Allocations: 3033)
+  Rendered acta/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 3372)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 169)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 6995)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 8106)
+
+
+Started GET "/acta/new" for 127.0.0.1 at 2021-03-09 11:46:56 -0300
+Processing by ActaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acta/new.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 3.2ms | Allocations: 2512)
+  Rendered acta/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2618)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 5788)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 6188)
+
+
+Started GET "/acta/new" for 127.0.0.1 at 2021-03-09 11:47:52 -0300
+Processing by ActaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acta/new.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 5.1ms | Allocations: 3034)
+  Rendered acta/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3373)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 169)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 6996)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 8103)
+
+
+Started GET "/acta/new" for 127.0.0.1 at 2021-03-09 11:48:10 -0300
+Processing by ActaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acta/new.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 12.2ms | Allocations: 3034)
+  Rendered acta/new.html.erb within layouts/application (Duration: 13.2ms | Allocations: 3373)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 169)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 7014)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms | Allocations: 8122)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 14:05:11 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 18.5ms | Allocations: 4738)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 4807)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms | Allocations: 7316)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `home_graphics_path' for #<ActionView::Base:0x00000000008e08>
+Did you mean?  home_graphic_path
+               home_graphic_url):
+    12: 			<%= link_to 'Lista', acta_path, class:'btn btn-primary text-white' %>
+    13: 		</div>
+    14: 		<div class="col-4">
+    15: 			<%= link_to 'Estadisticas', home_graphics_path ,class:'btn btn-primary text-white' %>
+    16: 		</div>
+    17: 
+    18: 	</div>
+  
+app/views/home/index.html.erb:15
+Started GET "/" for 127.0.0.1 at 2021-03-09 14:05:22 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.1ms | Allocations: 175)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 6304)
+Completed 200 OK in 26ms (Views: 26.0ms | Allocations: 6830)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 14:10:12 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 268)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.1ms | Allocations: 170)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3909)
+Completed 200 OK in 11ms (Views: 10.0ms | Allocations: 5008)
+
+
+Started GET "/acta/new" for 127.0.0.1 at 2021-03-09 14:10:14 -0300
+Processing by ActaController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/acta_controller.rb:16:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/new.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 15.2ms | Allocations: 4989)
+  Rendered acta/new.html.erb within layouts/application (Duration: 17.3ms | Allocations: 5332)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 8467)
+Completed 200 OK in 42ms (Views: 24.1ms | ActiveRecord: 1.5ms | Allocations: 16285)
+
+
+Started GET "/acta/new" for 127.0.0.1 at 2021-03-09 14:10:31 -0300
+Processing by ActaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acta/new.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 7.6ms | Allocations: 3038)
+  Rendered acta/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 3378)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 169)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 7001)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 8114)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" ORDER BY "acta"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" ORDER BY "acta"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/acta/new" for 127.0.0.1 at 2021-03-09 14:13:08 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ActaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acta/new.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 6.9ms | Allocations: 5007)
+  Rendered acta/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 5468)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 11594)
+Completed 200 OK in 40ms (Views: 21.8ms | ActiveRecord: 0.5ms | Allocations: 20226)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-09 14:13:16 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 278)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 3469)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 4396)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-09 14:13:17 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.2ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1345)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 4535)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.4ms | Allocations: 5818)
+
+
+Started GET "/acta/5" for 127.0.0.1 at 2021-03-09 14:13:19 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.4ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 488)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 3665)
+Completed 200 OK in 18ms (Views: 11.0ms | ActiveRecord: 0.4ms | Allocations: 5160)
+
+
+Started GET "/acta/5/edit" for 127.0.0.1 at 2021-03-09 14:13:20 -0300
+Processing by ActaController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.3ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/edit.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 7.6ms | Allocations: 2584)
+  Rendered acta/edit.html.erb within layouts/application (Duration: 9.6ms | Allocations: 2842)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 6013)
+Completed 200 OK in 23ms (Views: 17.2ms | ActiveRecord: 0.3ms | Allocations: 7072)
+
+
+Started PATCH "/acta/5" for 127.0.0.1 at 2021-03-09 14:13:23 -0300
+Processing by ActaController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "actum"=>{"fecha(1i)"=>"2021", "fecha(2i)"=>"3", "fecha(3i)"=>"5", "fecha(4i)"=>"15", "fecha(5i)"=>"07", "num_acta"=>"123456", "dominio"=>"aa908xo", "tipo_vehiculo"=>"Tipo de Vehiculo", "pertenece_a"=>"Las flores", "juzgado"=>"la plata", "articulo"=>"null", "autoridad"=>"Nicolas perez"}, "commit"=>"Update Actum", "id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+  [1m[36mActum Update (1.1ms)[0m  [1m[33mUPDATE "acta" SET "articulo" = ?, "updated_at" = ? WHERE "acta"."id" = ?[0m  [["articulo", "null"], ["updated_at", "2021-03-09 17:13:23.334590"], ["id", 5]]
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+Redirected to http://localhost:3000/acta/5
+Completed 302 Found in 23ms (ActiveRecord: 6.7ms | Allocations: 5655)
+
+
+Started GET "/acta/5" for 127.0.0.1 at 2021-03-09 14:13:23 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 174)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3347)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.1ms | Allocations: 4287)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActum Load (0.2ms)[0m  [1m[34mSELECT "acta".* FROM "acta" ORDER BY "acta"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mActum Load (0.2ms)[0m  [1m[34mSELECT "acta".* FROM "acta" ORDER BY "acta"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/acta/5" for 127.0.0.1 at 2021-03-09 14:25:05 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"5"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2024)
+
+
+  
+SyntaxError (/home/nicolas/Escritorio/legalesApp/app/models/actum.rb:2: syntax error, unexpected ':', expecting `end'
+    validate :tipo_vehiculo :dominio, presence: true
+                            ^
+):
+  
+app/models/actum.rb:2: syntax error, unexpected ':', expecting `end'
+app/models/actum.rb:2: syntax error, unexpected ':', expecting `end'
+app/models/actum.rb:2: syntax error, unexpected ':', expecting `end'
+app/controllers/acta_controller.rb:63:in `set_actum'
+Started GET "/acta/5" for 127.0.0.1 at 2021-03-09 14:25:30 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"5"}
+Completed 500 Internal Server Error in 3ms (Allocations: 1231)
+
+
+  
+SyntaxError (/home/nicolas/Escritorio/legalesApp/app/models/actum.rb:2: syntax error, unexpected ':', expecting `end'
+    validates :tipo_vehiculo :dominio, presence: true
+                             ^
+):
+  
+app/models/actum.rb:2: syntax error, unexpected ':', expecting `end'
+app/models/actum.rb:2: syntax error, unexpected ':', expecting `end'
+app/models/actum.rb:2: syntax error, unexpected ':', expecting `end'
+app/controllers/acta_controller.rb:63:in `set_actum'
+Started GET "/acta/5" for 127.0.0.1 at 2021-03-09 14:26:00 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"5"}
+Completed 500 Internal Server Error in 3ms (Allocations: 2430)
+
+
+  
+NameError (uninitialized constant ActaController::Actum):
+  
+app/controllers/acta_controller.rb:63:in `set_actum'
+Started GET "/acta/5" for 127.0.0.1 at 2021-03-09 14:26:23 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  [1m[36mActum Load (0.2ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 589)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.0ms | Allocations: 175)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 6710)
+Completed 200 OK in 39ms (Views: 15.3ms | ActiveRecord: 2.1ms | Allocations: 15894)
+
+
+Started GET "/acta/5/edit" for 127.0.0.1 at 2021-03-09 14:26:26 -0300
+Processing by ActaController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/edit.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 11.8ms | Allocations: 4951)
+  Rendered acta/edit.html.erb within layouts/application (Duration: 12.9ms | Allocations: 5337)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 8509)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.1ms | Allocations: 9580)
+
+
+Started PATCH "/acta/5" for 127.0.0.1 at 2021-03-09 14:26:31 -0300
+Processing by ActaController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "actum"=>{"fecha(1i)"=>"2021", "fecha(2i)"=>"3", "fecha(3i)"=>"5", "fecha(4i)"=>"15", "fecha(5i)"=>"07", "num_acta"=>"123456", "dominio"=>"", "tipo_vehiculo"=>"Moto", "pertenece_a"=>"Las flores", "juzgado"=>"la plata", "articulo"=>"null", "autoridad"=>"Nicolas perez"}, "commit"=>"Update Actum", "id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/edit.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 5.8ms | Allocations: 3311)
+  Rendered acta/edit.html.erb within layouts/application (Duration: 6.3ms | Allocations: 3443)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 6565)
+Completed 422 Unprocessable Entity in 18ms (Views: 11.5ms | ActiveRecord: 0.1ms | Allocations: 8871)
+
+
+Started GET "/acta/5" for 127.0.0.1 at 2021-03-09 14:27:10 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  [1m[36mActum Load (0.2ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 182)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3336)
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 0.5ms | Allocations: 5056)
+
+
+Started GET "/acta/5/edit" for 127.0.0.1 at 2021-03-09 14:27:12 -0300
+Processing by ActaController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/edit.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 4.2ms | Allocations: 2557)
+  Rendered acta/edit.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2689)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 5872)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.1ms | Allocations: 6805)
+
+
+Started PATCH "/acta/5" for 127.0.0.1 at 2021-03-09 14:27:17 -0300
+Processing by ActaController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "actum"=>{"fecha(1i)"=>"2021", "fecha(2i)"=>"3", "fecha(3i)"=>"5", "fecha(4i)"=>"15", "fecha(5i)"=>"07", "num_acta"=>"123456", "dominio"=>"", "tipo_vehiculo"=>"Moto", "pertenece_a"=>"Las flores", "juzgado"=>"la plata", "articulo"=>"null", "autoridad"=>"Nicolas perez"}, "commit"=>"Update Actum", "id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/edit.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 8.3ms | Allocations: 3221)
+  Rendered acta/edit.html.erb within layouts/application (Duration: 8.9ms | Allocations: 3353)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 6460)
+Completed 422 Unprocessable Entity in 17ms (Views: 13.8ms | ActiveRecord: 0.1ms | Allocations: 8631)
+
+
+Started GET "/acta/5" for 127.0.0.1 at 2021-03-09 14:27:41 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 182)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3352)
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.5ms | Allocations: 5088)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-09 14:27:43 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.2ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1325)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 4500)
+Completed 200 OK in 15ms (Views: 11.5ms | ActiveRecord: 0.4ms | Allocations: 5756)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-09 14:28:24 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1278)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 170)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 4905)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 0.3ms | Allocations: 6711)
+
+
+Started GET "/acta" for 127.0.0.1 at 2021-03-09 14:28:25 -0300
+Processing by ActaController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "acta"."articulo" AS acta_articulo FROM "acta" GROUP BY "acta"."articulo"[0m
+  ↳ app/controllers/acta_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/index.html.erb within layouts/application
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta"[0m
+  ↳ app/views/acta/index.html.erb:20
+  Rendered acta/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 997)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 4185)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.3ms | Allocations: 5262)
+
+
+Started GET "/acta/5" for 127.0.0.1 at 2021-03-09 14:28:27 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 470)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3645)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 0.1ms | Allocations: 4706)
+
+
+Started GET "/acta/5/edit" for 127.0.0.1 at 2021-03-09 14:28:29 -0300
+Processing by ActaController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.5ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/edit.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 7.3ms | Allocations: 3083)
+  Rendered acta/edit.html.erb within layouts/application (Duration: 9.3ms | Allocations: 3469)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 6654)
+Completed 200 OK in 22ms (Views: 16.9ms | ActiveRecord: 0.5ms | Allocations: 7715)
+
+
+Started PATCH "/acta/5" for 127.0.0.1 at 2021-03-09 14:28:33 -0300
+Processing by ActaController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "actum"=>{"fecha(1i)"=>"2021", "fecha(2i)"=>"3", "fecha(3i)"=>"5", "fecha(4i)"=>"15", "fecha(5i)"=>"07", "num_acta"=>"123456", "dominio"=>"aa908xo", "tipo_vehiculo"=>"Tipo de Vehiculo", "pertenece_a"=>"Las flores", "juzgado"=>"la plata", "articulo"=>"nil", "autoridad"=>"Nicolas perez"}, "commit"=>"Update Actum", "id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+  [1m[36mActum Update (0.3ms)[0m  [1m[33mUPDATE "acta" SET "articulo" = ?, "updated_at" = ? WHERE "acta"."id" = ?[0m  [["articulo", "nil"], ["updated_at", "2021-03-09 17:28:33.404484"], ["id", 5]]
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+Redirected to http://localhost:3000/acta/5
+Completed 302 Found in 18ms (ActiveRecord: 5.5ms | Allocations: 5532)
+
+
+Started GET "/acta/5" for 127.0.0.1 at 2021-03-09 14:28:33 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 174)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3359)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.1ms | Allocations: 4300)
+
+
+Started GET "/acta/5" for 127.0.0.1 at 2021-03-09 14:29:10 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  [1m[36mActum Load (0.2ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 182)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 3350)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 0.4ms | Allocations: 5071)
+
+
+Started GET "/acta/5/edit" for 127.0.0.1 at 2021-03-09 14:29:15 -0300
+Processing by ActaController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/edit.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 3.3ms | Allocations: 2557)
+  Rendered acta/edit.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2689)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 5858)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.1ms | Allocations: 6791)
+
+
+Started GET "/acta/5/edit" for 127.0.0.1 at 2021-03-09 14:29:31 -0300
+Processing by ActaController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/edit.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 3.9ms | Allocations: 3082)
+  Rendered acta/edit.html.erb within layouts/application (Duration: 4.9ms | Allocations: 3470)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 169)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 7109)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.1ms | Allocations: 8754)
+
+
+Started PATCH "/acta/5" for 127.0.0.1 at 2021-03-09 14:29:34 -0300
+Processing by ActaController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "actum"=>{"fecha(1i)"=>"2021", "fecha(2i)"=>"3", "fecha(3i)"=>"5", "fecha(4i)"=>"15", "fecha(5i)"=>"07", "num_acta"=>"123456", "dominio"=>"aa908xo", "tipo_vehiculo"=>"Tipo de Vehiculo", "pertenece_a"=>"Las flores", "juzgado"=>"la plata", "articulo"=>"Articulo", "autoridad"=>"Nicolas perez"}, "commit"=>"Update Actum", "id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+  [1m[36mActum Update (0.9ms)[0m  [1m[33mUPDATE "acta" SET "articulo" = ?, "updated_at" = ? WHERE "acta"."id" = ?[0m  [["articulo", "Articulo"], ["updated_at", "2021-03-09 17:29:34.219824"], ["id", 5]]
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+Redirected to http://localhost:3000/acta/5
+Completed 302 Found in 26ms (ActiveRecord: 9.5ms | Allocations: 5384)
+
+
+Started GET "/acta/5" for 127.0.0.1 at 2021-03-09 14:29:34 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 472)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3661)
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 0.1ms | Allocations: 4730)
+
+
+Started GET "/acta/5" for 127.0.0.1 at 2021-03-09 14:30:40 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 470)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 170)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 4095)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.1ms | Allocations: 5736)
+
+
+Started GET "/acta/5/edit" for 127.0.0.1 at 2021-03-09 14:30:42 -0300
+Processing by ActaController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/edit.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 6.8ms | Allocations: 3082)
+  Rendered acta/edit.html.erb within layouts/application (Duration: 8.2ms | Allocations: 3464)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 6645)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.1ms | Allocations: 7704)
+
+
+Started PATCH "/acta/5" for 127.0.0.1 at 2021-03-09 14:30:45 -0300
+Processing by ActaController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "actum"=>{"fecha(1i)"=>"2021", "fecha(2i)"=>"3", "fecha(3i)"=>"5", "fecha(4i)"=>"15", "fecha(5i)"=>"07", "num_acta"=>"123456", "dominio"=>"aa908xo", "tipo_vehiculo"=>"Tipo de Vehiculo", "pertenece_a"=>"Las flores", "juzgado"=>"la plata", "articulo"=>"false", "autoridad"=>"Nicolas perez"}, "commit"=>"Update Actum", "id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+  [1m[36mActum Update (0.4ms)[0m  [1m[33mUPDATE "acta" SET "articulo" = ?, "updated_at" = ? WHERE "acta"."id" = ?[0m  [["articulo", "false"], ["updated_at", "2021-03-09 17:30:45.052023"], ["id", 5]]
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+Redirected to http://localhost:3000/acta/5
+Completed 302 Found in 24ms (ActiveRecord: 5.7ms | Allocations: 5404)
+
+
+Started GET "/acta/5" for 127.0.0.1 at 2021-03-09 14:30:45 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.2ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 174)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3359)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.2ms | Allocations: 4299)
+
+
+Started GET "/acta/5/edit" for 127.0.0.1 at 2021-03-09 14:31:42 -0300
+Processing by ActaController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/edit.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 6.7ms | Allocations: 3083)
+  Rendered acta/edit.html.erb within layouts/application (Duration: 8.3ms | Allocations: 3469)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 169)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 7107)
+Completed 200 OK in 19ms (Views: 15.9ms | ActiveRecord: 0.1ms | Allocations: 8755)
+
+
+Started PATCH "/acta/5" for 127.0.0.1 at 2021-03-09 14:31:45 -0300
+Processing by ActaController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "actum"=>{"fecha(1i)"=>"2021", "fecha(2i)"=>"3", "fecha(3i)"=>"5", "fecha(4i)"=>"15", "fecha(5i)"=>"07", "num_acta"=>"123456", "dominio"=>"aa908xo", "tipo_vehiculo"=>"nill", "pertenece_a"=>"Las flores", "juzgado"=>"la plata", "articulo"=>"Articulo", "autoridad"=>"Nicolas perez"}, "commit"=>"Update Actum", "id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+  [1m[36mActum Update (0.3ms)[0m  [1m[33mUPDATE "acta" SET "tipo_vehiculo" = ?, "articulo" = ?, "updated_at" = ? WHERE "acta"."id" = ?[0m  [["tipo_vehiculo", "nill"], ["articulo", "Articulo"], ["updated_at", "2021-03-09 17:31:45.137840"], ["id", 5]]
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+Redirected to http://localhost:3000/acta/5
+Completed 302 Found in 17ms (ActiveRecord: 6.6ms | Allocations: 5414)
+
+
+Started GET "/acta/5" for 127.0.0.1 at 2021-03-09 14:31:45 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 472)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3661)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.1ms | Allocations: 4730)
+
+
+Started GET "/acta/5" for 127.0.0.1 at 2021-03-09 14:31:54 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 470)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 170)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 4095)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.1ms | Allocations: 5736)
+
+
+Started GET "/acta/5/edit" for 127.0.0.1 at 2021-03-09 14:31:56 -0300
+Processing by ActaController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/edit.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 8.0ms | Allocations: 3082)
+  Rendered acta/edit.html.erb within layouts/application (Duration: 9.2ms | Allocations: 3464)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 6649)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.1ms | Allocations: 7709)
+
+
+Started PATCH "/acta/5" for 127.0.0.1 at 2021-03-09 14:31:58 -0300
+Processing by ActaController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "actum"=>{"fecha(1i)"=>"2021", "fecha(2i)"=>"3", "fecha(3i)"=>"5", "fecha(4i)"=>"15", "fecha(5i)"=>"07", "num_acta"=>"123456", "dominio"=>"aa908xo", "tipo_vehiculo"=>"", "pertenece_a"=>"Las flores", "juzgado"=>"la plata", "articulo"=>"Articulo", "autoridad"=>"Nicolas perez"}, "commit"=>"Update Actum", "id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+  [1m[36mActum Update (0.6ms)[0m  [1m[33mUPDATE "acta" SET "tipo_vehiculo" = ?, "updated_at" = ? WHERE "acta"."id" = ?[0m  [["tipo_vehiculo", ""], ["updated_at", "2021-03-09 17:31:58.793011"], ["id", 5]]
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+Redirected to http://localhost:3000/acta/5
+Completed 302 Found in 16ms (ActiveRecord: 6.7ms | Allocations: 5402)
+
+
+Started GET "/acta/5" for 127.0.0.1 at 2021-03-09 14:31:58 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 174)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3359)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 4299)
+
+
+Started GET "/acta/5" for 127.0.0.1 at 2021-03-09 14:32:21 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 473)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 170)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 4113)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 0.1ms | Allocations: 5761)
+
+
+Started GET "/acta/5/edit" for 127.0.0.1 at 2021-03-09 14:32:23 -0300
+Processing by ActaController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/edit.html.erb within layouts/application
+  Rendered acta/_form.html.erb (Duration: 8.4ms | Allocations: 3081)
+  Rendered acta/edit.html.erb within layouts/application (Duration: 9.5ms | Allocations: 3464)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 6649)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.1ms | Allocations: 7709)
+
+
+Started PATCH "/acta/5" for 127.0.0.1 at 2021-03-09 14:32:25 -0300
+Processing by ActaController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "actum"=>{"fecha(1i)"=>"2021", "fecha(2i)"=>"3", "fecha(3i)"=>"5", "fecha(4i)"=>"15", "fecha(5i)"=>"07", "num_acta"=>"123456", "dominio"=>"aa908xo", "tipo_vehiculo"=>"Tipo de Vehiculo", "pertenece_a"=>"Las flores", "juzgado"=>"la plata", "articulo"=>"Articulo", "autoridad"=>"Nicolas perez"}, "commit"=>"Update Actum", "id"=>"5"}
+  [1m[36mActum Load (0.1ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+  [1m[36mActum Update (4.1ms)[0m  [1m[33mUPDATE "acta" SET "tipo_vehiculo" = ?, "updated_at" = ? WHERE "acta"."id" = ?[0m  [["tipo_vehiculo", "Tipo de Vehiculo"], ["updated_at", "2021-03-09 17:32:25.727202"], ["id", 5]]
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/acta_controller.rb:41:in `block in update'
+Redirected to http://localhost:3000/acta/5
+Completed 302 Found in 23ms (ActiveRecord: 9.3ms | Allocations: 5406)
+
+
+Started GET "/acta/5" for 127.0.0.1 at 2021-03-09 14:32:25 -0300
+Processing by ActaController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActum Load (0.2ms)[0m  [1m[34mSELECT "acta".* FROM "acta" WHERE "acta"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/acta_controller.rb:63:in `set_actum'
+  Rendering layout layouts/application.html.erb
+  Rendering acta/show.html.erb within layouts/application
+  Rendered acta/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 174)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3345)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.2ms | Allocations: 4285)
+
+

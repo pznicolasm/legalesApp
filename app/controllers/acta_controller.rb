@@ -4,6 +4,7 @@ class ActaController < ApplicationController
   # GET /acta or /acta.json
   def index
     @acta = Actum.all
+    @articulo = Actum.group(:articulo).count
   end
 
   # GET /acta/1 or /acta/1.json
